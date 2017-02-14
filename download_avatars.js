@@ -30,7 +30,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
      if (!error && response.statusCode === 200) {
         cb(error, body);
      } else {
-      return "You have an error!";
+     return "You have an error!";
      }
   });
 }
@@ -40,7 +40,7 @@ function downloadImageByURL(url, filePath) {
   .pipe(fs.createWriteStream(filePath));
 }
 //contains callback function
-getRepoContributors(arg1, arg2, function(err, result) {
+getRepoContributors(ownerRepo, nameRepo, function(err, result) {
   var data = JSON.parse(result);
   data.forEach(function(user) {
     downloadImageByURL(user.avatar_url, "./Avatars/" + user.login + ".jpg");
