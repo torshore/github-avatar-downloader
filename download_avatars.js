@@ -12,7 +12,7 @@ function UserError(message){
 }
 
 if (!ownerRepo || !nameRepo){
-    throw new UserError("Please provide input in the following format: node download_avatars.js <owner>repository>");
+    console.log("Please provide input in the following format: node download_avatars.js <owner>repository>");
 }
 //cb is called in this function
 function getRepoContributors(repoOwner, repoName, cb) {
