@@ -32,7 +32,7 @@ getRepoContributors("jquery", "jquery", function(err, result) {
 
 function downloadImageByURL(url, filePath) {
   request.get(url)
-  .pipe(fs.createWriteStream(`./${filePath}.jpg`));
+  .pipe(fs.createWriteStream(filePath));
 }
 
-downloadImageByURL("https://avatars2.githubusercontent.com/u/2741?v=3&s=466", "./kvirani")
+downloadImageByURL("https://avatars2.githubusercontent.com/u/2741?v=3&s=466", "./Avatars/kvirani.jpg")
